@@ -165,25 +165,40 @@
                 (printout t crlf crlf crlf ?*QG08* crlf crlf ?*ask* )
                 (assert (G08 (read)))
         )
-        
-        (defrule G07_NO
-                (G07 no) ?retractChy <- (G07 no)
-                (not (G08 ?)) =>
+
+
+         ;;------------------G08Y-G09
+         (defrule G08_YES
+                (G08 yes) ?retractChy <- (G08 yes)
+                (not (G09 ?)) =>
                 (retract ?retractChy)
-                (printout t crlf crlf crlf ?*QG08* crlf crlf ?*ask* )
-                (assert (G08 (read)))
+                (printout t crlf crlf crlf ?*QG09* crlf crlf ?*ask* )
+                (assert (G09 (read)))
         )
 
-        
+         ;;------------------G08N-G09
+        defrule G08_NO
+                (G08 no) ?retractChy <- (G08 no)
+                (not (G09 ?)) =>
+                (retract ?retractChy)
+                (printout t crlf crlf crlf ?*QG09* crlf crlf ?*ask* )
+                (assert (G09 (read)))
+        )
 
 
+        ;;------------------G09Y-G010
+         (defrule G09_YES
+                (G09 yes) ?retractChy <- (G09 yes)
+                 =>
+                (retract ?retractChy)
+                (printout t crlf crlf crlf ?*P2* crlf crlf ?*thk* )
+        )
 
-        ; ;;------------------G05N->FINISH
-        ; (defrule G05_NO
-        ;         (G05 no) ?retractChy <- (G05 no)
-        ;         =>
-        ;         (retract ?retractChy)
-        ;         crlf crlf ?*thk* 
-        ;         (printout t crlf crlf crlf ?*PEND* crlf crlf ?*thk*  )
-                
-        ; )
+
+        ;;------------------G05N->FINISH
+        (defrule G09_NO
+                (G09 no) ?retractChy <- (G09 no)
+                =>
+                (retract ?retractChy)
+                (printout t crlf crlf crlf ?*PEND* crlf crlf ?*thk*  )
+        )
