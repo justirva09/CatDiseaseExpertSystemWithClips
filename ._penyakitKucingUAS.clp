@@ -124,13 +124,66 @@
                 (printout t crlf crlf crlf ?*P1* crlf crlf ?*thk* )
         )
 
-
-        ;;------------------G05N->FINISH
         (defrule G05_NO
                 (G05 no) ?retractChy <- (G05 no)
-                =>
+                (not (G06 ?)) =>
                 (retract ?retractChy)
-                crlf crlf ?*thk* 
-                (printout t crlf crlf crlf ?*PEND* crlf crlf ?*thk*  )
-                
+                (printout t crlf crlf crlf ?*QG06* crlf crlf ?*ask* )
+                (assert (G06 (read)))
         )
+
+          ;;------------------G06Y-G07
+         (defrule G06_YES
+                (G06 yes) ?retractChy <- (G06 yes)
+                (not (G07 ?)) =>
+                (retract ?retractChy)
+                (printout t crlf crlf crlf ?*QG07* crlf crlf ?*ask* )
+                (assert (G07 (read)))
+        )
+
+        (defrule G06_NO
+                (G06 no) ?retractChy <- (G06 no)
+                (not (G07 ?)) =>
+                (retract ?retractChy)
+                (printout t crlf crlf crlf ?*QG07* crlf crlf ?*ask* )
+                (assert (G07 (read)))
+        )
+
+          ;;------------------G07Y-G08
+         (defrule G07_YES
+                (G07 yes) ?retractChy <- (G07 yes)
+                 =>
+                (retract ?retractChy)
+                (printout t crlf crlf crlf ?*P3* crlf crlf ?*thk* )
+        )
+
+        ;;------------------G07N-G08
+        (defrule G07_NO
+                (G07 no) ?retractChy <- (G07 no)
+                (not (G08 ?)) =>
+                (retract ?retractChy)
+                (printout t crlf crlf crlf ?*QG08* crlf crlf ?*ask* )
+                (assert (G08 (read)))
+        )
+        
+        (defrule G07_NO
+                (G07 no) ?retractChy <- (G07 no)
+                (not (G08 ?)) =>
+                (retract ?retractChy)
+                (printout t crlf crlf crlf ?*QG08* crlf crlf ?*ask* )
+                (assert (G08 (read)))
+        )
+
+        
+
+
+
+        ; ;;------------------G05N->FINISH
+        ; (defrule G05_NO
+        ;         (G05 no) ?retractChy <- (G05 no)
+        ;         =>
+        ;         (retract ?retractChy)
+        ;         crlf crlf ?*thk* 
+        ;         (printout t crlf crlf crlf ?*PEND* crlf crlf ?*thk*  )
+                
+        ; )
