@@ -10,28 +10,11 @@
         ?*QG07* = "Apakah kucing anda terlihat pucat? (Yes | No) "
         ?*QG08* = "Apakah kucing anda mengalami Anoreksia? (Yes | No) "
         ?*QG09* = "Apakah kucing anda mengalami Epifora(mata berair)? (Yes | No)"
-        ?*QG10* = "Apakah kucing anda mengalami Melena (Tinja berwarna Hitam)? (Yes | No)"
-        ?*QG11* = "Apakah kucing anda mengalami Ikterus? (Yes | No) "
-        ?*QG12* = "Apakah kucing anda mengalami Kutu di badan? (Yes | No) "
-        ?*QG13* = "Apakah kucing anda mengalami Kelumpuhan? (Yes | No) " 
-        ?*QG14* = "Apakah kucing anda mengalami Pincang? (Yes | No) "
-        ?*QG15* = "Apakah kucing anda mengalami Menurun Berat Bedan? (Yes | No) "
-        ?*QG16* = "Apakah kucing anda mengalami Halitosis(Bau Mulut)? (Yes | No) " 
-        ?*QG17* = "Apakah kucing anda mengalami Muntah? (Yes | No) "
-        ?*QG18* = "Apakah kucing anda mengalami Lesi anggota? (Yes | No) " 
-        ?*QG19* = "Apakah kucing anda mengalami Batuk? (Yes | No) "
-        ?*QG20* = "Apakah kucing anda mengalami Radang kulit? (Yes | No) "
 
         ?*PEND* = "GEJALA KUCING ANDA BELUM DAPAT DIDETEKSI"
         ?*P1* = "KUCING ANDA TERKENA KOKSIDIOSIS" 
         ?*P2* = "KUCING ANDA TERKENA Tripanosomiasis"
         ?*P3* = "KUCING ANDA TERKENA Hepatozoonosis"
-        ?*P4* = "KUCING ANDA TERKENA Babesiosis" 
-        ?*P5* = "KUCING ANDA TERKENA Distemper"
-        ?*P6* = "KUCING ANDA TERKENA Ankilostomiosis"
-        ?*P7* = "KUCING ANDA TERKENA TungauOtodectes"
-        ?*P8* = "KUCING ANDA TERKENA Phthiriasis"
-        ?*P9* = "KUCING ANDA TERKENA Pedikulosis"
 )
 
 
